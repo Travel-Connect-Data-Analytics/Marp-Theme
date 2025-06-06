@@ -1,0 +1,360 @@
+/**
+* Operation's Marp Theme
+* A clean, professional theme for Marp presentations
+* https://github.com/Mario1502/Mario-Marp-theme
+*/
+
+/* ===== BASE ELEMENTS ===== */
+section {
+  font-family: 'Arial', sans-serif;
+  padding: 40px;
+}
+
+/* Typography */
+h1 {
+  color: #2c3e50;
+  font-size: 2em;
+  border-bottom: 2px solid #3491db;
+  padding-bottom: 10px;
+}
+
+h2 {
+  color: rgb(60, 108, 143);
+}
+
+.small-text {
+  font-size: 0.8em;
+}
+
+/* ===== LAYOUT COMPONENTS ===== */
+/* Two-column layout */
+.columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+/* Adjust list sizing in columns for better fit */
+.columns ul li, .columns ol li {
+  font-size: 0.9em;
+  margin-bottom: 0.4em; /* Reduce space between list items */
+}
+
+.columns ul, .columns ol {
+  padding-left: 20px; /* Reduce indentation of lists */
+  margin-top: 0.5em; /* Reduce space above lists */
+  margin-bottom: 0.5em; /* Reduce space below lists */
+}
+
+/* Compact lists for slides with more content */
+.compact-list ul li, .compact-list ol li {
+  font-size: 0.85em;
+  margin-bottom: 0.3em;
+  line-height: 1.2;
+}
+
+.compact-list ul, .compact-list ol {
+  padding-left: 15px;
+  margin-top: 0.3em;
+  margin-bottom: 0.3em;
+}
+
+/* Chart placeholder for design mockups */
+.chart-placeholder {
+  margin: 20px 0;
+  height: 300px;
+  background-color: #f8f9fa;
+  border: 1px dashed #95a5a6;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-style: italic;
+  color: #7f8c8d;
+}
+
+/* ===== HEADER & FOOTER ===== */
+/* Custom header with logo */
+header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+header img {
+  height: 40px;
+}
+
+/* Custom footer with logo */
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+footer img {
+  height: 30px;
+}
+
+footer::after {
+  content: url("path/to/small-logo.png");
+  height: 20px;
+}
+
+/* ===== TABLES ===== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.center-table {
+  display: flex;
+  justify-content: center;
+}
+
+.center-table table {
+  width: 90%;  /* Or whatever width you prefer */
+}
+
+th {
+  background-color: rgb(0, 52, 87);
+  color: white;
+}
+
+td, th {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+/* ===== TEXT HIGHLIGHT COLORS ===== */
+.highlight {
+  color: #e74c3c;
+  font-weight: bold;
+}
+
+.highlight-blue {
+  color: #3498db;
+  font-weight: bold;
+}
+
+.highlight-green {
+  color: #2ecc71;
+  font-weight: bold;
+}
+
+.highlight-purple {
+  color: #9b59b6;
+  font-weight: bold;
+}
+
+.highlight-orange {
+  color: #e67e22;
+  font-weight: bold;
+}
+
+/* ===== STATUS INDICATORS ===== */
+.success {
+  color: #27ae60;
+  font-weight: bold;
+}
+
+.warning {
+  color: #f39c12;
+  font-weight: bold;
+}
+
+.error {
+  color: #c0392b;
+  font-weight: bold;
+}
+
+.info {
+  color: #2980b9;
+  font-weight: bold;
+}
+
+.neutral {
+  color: #7f8c8d;
+  font-weight: bold;
+}
+
+/* ===== BACKGROUND HIGHLIGHTS ===== */
+.bg-highlight {
+  background-color: #ffecdb;
+  padding: 2px 4px;
+  border-radius: 3px;
+}
+
+.bg-success {
+  background-color: #d5f5e3;
+  padding: 2px 4px;
+  border-radius: 3px;
+}
+
+.bg-warning {
+  background-color: #fef5e7;
+  padding: 2px 4px;
+  border-radius: 3px;
+}
+
+.bg-error {
+  background-color: #fadbd8;
+  padding: 2px 4px;
+  border-radius: 3px;
+}
+
+.bg-info {
+  background-color: #d6eaf8;
+  padding: 2px 4px;
+  border-radius: 3px;
+}
+
+/* ===== CONTENT-RICH SLIDES ===== */
+/* Layout for slides with more content */
+.content-rich h1 {
+  font-size: 1.6em;
+  margin-bottom: 0.3em;
+}
+
+.content-rich h2 {
+  font-size: 1.2em;
+  margin-top: 0.3em;
+  margin-bottom: 0.3em;
+}
+
+.content-rich ul li, .content-rich ol li {
+  font-size: 0.85em;
+  margin-bottom: 0.3em;
+}
+
+.content-rich .columns {
+  gap: 15px; /* Reduce space between columns */
+}
+
+/* ===== TEXT PILLS ===== */
+/* Pill-style text highlights for keywords, categories, etc. */
+.pill {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 20px;
+  font-size: 0.85em;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+/* Default pill (gray) */
+.pill {
+  background-color: #f0f0f0;
+  color: #555;
+}
+
+/* Primary colors */
+.pill-blue {
+  background-color: #e1f0fa;
+  color: #1976d2;
+}
+
+.pill-green {
+  background-color: #e6f4ea;
+  color: #0d904f;
+}
+
+.pill-red {
+  background-color: #fdedeb;
+  color: #d32f2f;
+}
+
+.pill-yellow {
+  background-color: #fff8e1;
+  color: #f57f17;
+}
+
+.pill-purple {
+  background-color: #f1e9fc;
+  color: #7b1fa2;
+}
+
+/* Status pills */
+.pill-success {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+}
+
+.pill-warning {
+  background-color: #fff8e1;
+  color: #ef6c00;
+}
+
+.pill-error {
+  background-color: #ffebee;
+  color: #c62828;
+}
+
+.pill-info {
+  background-color: #e3f2fd;
+  color: #0277bd;
+}
+
+/* Filled pills (more vibrant) */
+.pill-filled {
+  color: white;
+}
+
+.pill-filled.pill-blue {
+  background-color: #2196f3;
+}
+
+.pill-filled.pill-green {
+  background-color: #4caf50;
+}
+
+.pill-filled.pill-red {
+  background-color: #f44336;
+}
+
+.pill-filled.pill-yellow {
+  background-color: #ffc107;
+  color: #333; /* Dark text for better contrast on yellow */
+}
+
+.pill-filled.pill-purple {
+  background-color: #9c27b0;
+}
+
+.pill-filled.pill-success {
+  background-color: #4caf50;
+}
+
+.pill-filled.pill-warning {
+  background-color: #ff9800;
+  color: #333; /* Dark text for better contrast on orange */
+}
+
+.pill-filled.pill-error {
+  background-color: #f44336;
+}
+
+.pill-filled.pill-info {
+  background-color: #2196f3;
+}
+
+
+/* ===== CUSTOM SLIDE LAYOUTS ===== */
+/* Add your custom slide layouts here as you develop them */
+/* Example:
+.title-slide {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+*/
